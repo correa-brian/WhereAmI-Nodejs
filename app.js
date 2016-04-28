@@ -11,7 +11,7 @@ var routes = require('./routes/index');
 var api = require('./routes/api');
 
 // Here we find an appropriate database to connect to, defaulting to localhost if we don't find one.  
-var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/'+appName;
+var uristring = process.env.MONGODB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/'+appName;
 
 // Makes connection asynchronously.  Mongoose will queue up database operations and release them when the connection is complete.
 mongoose.connect(uristring, function (err, res) {
