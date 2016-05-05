@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var QuestionSchema = new mongoose.Schema({
 	image: {type:String, default:''},
-	answer: {type:String, trim:true, lowercase:true, default:''},
+	answer: {type:String, trim:true, default:''},
 	options: {type:Array, default:[]},
 	timestamp: {type:Date, default:Date.now}
 });
